@@ -14,7 +14,7 @@ module.exports = () => {
     },
     output: {
       filename: '[name].bundle.js',
-      path: path.resolve(__dirname, 'dist'),
+      path: path.resolve(__dirname, 'dist')
     },
     plugins: [
       new HtmlWebpackPlugin({
@@ -23,7 +23,7 @@ module.exports = () => {
       }),
       new InjectManifest({
         swSrc: './src-sw.js',
-        swDest: 'src-sw.js',
+        swDest: 'src-sw.js'
       }),
       new WebpackPwaManifest({
         fingerprints: false,
@@ -31,20 +31,36 @@ module.exports = () => {
         name: 'Just Another Text Editor',
         short_name: 'J.A.T.E',
         description: 'A PWA based text editor.',
+        background_color: '#403c3c',
+        theme_color: '#403c3c',
         start_url: './',
         publicPath: './',
         icons: [{
           src: path.resolve('src/images/logo.png'),
-          sizes: [96, 128, 192, 256, 384, 512],
-          destination: path.join('assets', 'icons'),
+          sizes: [ 96, 128, 192, 256, 384, 512 ],
+          destination: path.join('assets', 'icons')
         }]
       })
     ],
 
     module: {
       rules: [
-        
-      ],
-    },
+        {
+          test: /\.css$/i,
+          use: [ 'style-loader', 'css-loader' ]
+        },
+        {
+          test: /\.m?js$/,
+          exclude: /node_modules/,
+          use: {
+            loader: 'babel-loader',
+            options: {
+              presets: [ '@babel/preset-env' ],
+              plugins: [ '@babel/plugin-proposal-object-rest-spread', '@babel/transform-runtime' ]
+            }
+          }
+        }
+      ]
+    }
   };
 };
