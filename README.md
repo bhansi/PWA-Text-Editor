@@ -24,9 +24,9 @@ This application is a web based text editor that highlights JavaScript syntax. A
 
 Click [here]() to open the deployed version of the app and use to your liking. Additionally, you can install the app by clicking the install button at the top left of the page. See below for images of the app being run both on the web browser and locally (installed) on a machine.
 
-![Image showing app running in browser.]()
+![Image showing app running in browser.](./client/src/images/browser.png)
 
-![Image showing locally installed app running.]()
+![Image showing locally installed app running.](./client/src/images/installed.png)
 
 #### Run Locally
 
