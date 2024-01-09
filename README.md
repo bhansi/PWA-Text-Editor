@@ -22,7 +22,7 @@ This application is a web based text editor that highlights JavaScript syntax. A
 
 ## Usage
 
-Click [here]() to open the deployed version of the app and use to your liking. Additionally, you can install the app by clicking the install button at the top left of the page. See below for images of the app being run both on the web browser and locally (installed) on a machine.
+Click [here](https://pwa-text-editor-04nk.onrender.com) to open the deployed version of the app and use to your liking. Additionally, you can install the app by clicking the install button at the top left of the page. See below for images of the app being run both on the web browser and locally (installed) on a machine.
 
 ![Image showing app running in browser.](./client/src/images/browser.png)
 
