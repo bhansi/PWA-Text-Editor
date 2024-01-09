@@ -28,7 +28,7 @@ module.exports = () => {
         inject: true,
         name: 'Just Another Text Editor',
         short_name: 'J.A.T.E',
-        description: 'A PWA based text editor.',
+        description: 'A PWA based JavaScript text editor.',
         background_color: '#403c3c',
         theme_color: '#403c3c',
         start_url: './',
